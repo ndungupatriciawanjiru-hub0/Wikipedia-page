@@ -1,0 +1,342 @@
+/* =====================
+RESET & BASE
+===================== */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Linux Libertine', Georgia, serif;
+font-size: 15px;
+color: #202122;
+background: #ffffff;
+line-height: 1.6;
+}
+
+/* =====================
+TOP NAV BAR
+===================== */
+.topbar {
+background: #ffffff;
+border-bottom: 1px solid #a2a9b1;
+padding: 8px 16px;
+display: flex;
+align-items: center;
+gap: 16px;
+}
+
+.topbar .logo {
+font-size: 1.2rem;
+font-weight: bold;
+color: #000;
+text-decoration: none;
+}
+
+.topbar .logo span { color: #3366cc; }
+
+.search-bar {
+display: flex;
+border: 1px solid #a2a9b1;
+border-radius: 2px;
+overflow: hidden;
+margin-left: auto;
+}
+
+.search-bar input {
+padding: 5px 8px;
+border: none;
+outline: none;
+font-size: 13px;
+width: 200px;
+font-family: Arial, sans-serif;
+}
+
+.search-bar button {
+background: #f8f9fa;
+border: none;
+border-left: 1px solid #a2a9b1;
+padding: 5px 10px;
+cursor: pointer;
+font-size: 12px;
+}
+
+.nav-links {
+display: flex;
+gap: 14px;
+list-style: none;
+}
+
+.nav-links a {
+color: #3366cc;
+text-decoration: none;
+font-size: 13px;
+font-family: Arial, sans-serif;
+}
+
+/* =====================
+PAGE TABS
+===================== */
+.page-tabs {
+border-bottom: 1px solid #a2a9b1;
+padding: 0 16px;
+display: flex;
+font-family: Arial, sans-serif;
+font-size: 13px;
+}
+
+.page-tabs a {
+display: inline-block;
+padding: 8px 14px;
+color: #3366cc;
+text-decoration: none;
+border: 1px solid transparent;
+border-bottom: none;
+margin-bottom: -1px;
+}
+
+.page-tabs a.active {
+background: #fff;
+border-color: #a2a9b1;
+color: #202122;
+border-radius: 3px 3px 0 0;
+}
+
+/* =====================
+LAYOUT
+===================== */
+.layout {
+display: flex;
+max-width: 1200px;
+margin: 0 auto;
+padding: 16px;
+gap: 24px;
+}
+
+/* =====================
+SIDEBAR
+===================== */
+aside {
+width: 170px;
+flex-shrink: 0;
+font-family: Arial, sans-serif;
+font-size: 13px;
+}
+
+aside .sidebar-section { margin-bottom: 16px; }
+
+aside h3 {
+font-size: 11px;
+font-weight: bold;
+border-bottom: 1px solid #a2a9b1;
+padding-bottom: 4px;
+margin-bottom: 8px;
+color: #54595d;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+}
+
+aside ul { list-style: none; }
+aside ul li { margin-bottom: 5px; }
+aside ul li a {
+color: #3366cc;
+text-decoration: none;
+font-size: 13px;
+}
+aside ul li a:hover { text-decoration: underline; }
+
+/* =====================
+ARTICLE
+===================== */
+article { flex: 1; min-width: 0; }
+
+article h1 {
+font-family: 'Linux Libertine', Georgia, serif;
+font-size: 2rem;
+font-weight: normal;
+border-bottom: 1px solid #a2a9b1;
+padding-bottom: 4px;
+margin-bottom: 4px;
+}
+
+.page-subtitle {
+font-family: Arial, sans-serif;
+font-size: 0.85rem;
+color: #54595d;
+font-style: italic;
+margin-bottom: 14px;
+}
+
+/* Infobox */
+.infobox {
+float: right;
+clear: right;
+margin: 0 0 16px 20px;
+border: 1px solid #a2a9b1;
+background: #f8f9fa;
+font-size: 13px;
+width: 260px;
+font-family: Arial, sans-serif;
+}
+
+.infobox-title {
+background: #0b3d91;
+color: #fff;
+font-weight: bold;
+padding: 8px;
+font-size: 14px;
+text-align: center;
+}
+
+.infobox table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.infobox td {
+padding: 5px 8px;
+border-top: 1px solid #eaecf0;
+vertical-align: top;
+font-size: 13px;
+}
+
+.infobox td:first-child {
+font-weight: bold;
+color: #555;
+width: 42%;
+}
+
+/* Table of Contents */
+.toc {
+border: 1px solid #a2a9b1;
+background: #f8f9fa;
+display: inline-block;
+padding: 12px 18px;
+margin: 12px 0 20px 0;
+font-size: 13px;
+font-family: Arial, sans-serif;
+min-width: 220px;
+}
+
+.toc-title {
+font-weight: bold;
+margin-bottom: 8px;
+font-size: 14px;
+}
+
+.toc ol {
+padding-left: 1.4rem;
+margin: 0;
+}
+
+.toc ol li { margin-bottom: 4px; }
+
+.toc ol li ul {
+list-style: none;
+padding-left: 1.2rem;
+margin-top: 3px;
+}
+
+.toc ol li ul li { margin-bottom: 3px; }
+
+.toc a {
+color: #3366cc;
+text-decoration: none;
+}
+
+.toc a:hover { text-decoration: underline; }
+
+/* Headings */
+article h2 {
+font-family: 'Linux Libertine', Georgia, serif;
+font-size: 1.4rem;
+font-weight: normal;
+border-bottom: 1px solid #a2a9b1;
+padding-bottom: 3px;
+margin: 28px 0 10px;
+}
+
+article h3 {
+font-family: Arial, sans-serif;
+font-size: 1rem;
+font-weight: bold;
+margin: 18px 0 8px;
+}
+
+article p { margin-bottom: 12px; font-size: 15px; }
+
+article a { color: #3366cc; text-decoration: none; }
+article a:hover { text-decoration: underline; }
+
+/* Superscripts */
+sup { font-size: 0.7rem; line-height: 0; }
+sup a { color: #3366cc; text-decoration: none; }
+sup a:hover { text-decoration: underline; }
+
+/* Lists */
+article ul, article ol {
+padding-left: 2rem;
+margin-bottom: 12px;
+font-size: 15px;
+}
+
+article ul li, article ol li { margin-bottom: 5px; }
+
+/* Edit link */
+.edit-link {
+font-size: 0.8rem;
+font-family: Arial, sans-serif;
+margin-left: 8px;
+color: #3366cc;
+text-decoration: none;
+}
+
+/* References */
+.references-list {
+font-family: Arial, sans-serif;
+font-size: 13px;
+}
+
+.references-list ol { padding-left: 2rem; }
+
+.references-list ol li {
+margin-bottom: 8px;
+color: #202122;
+}
+
+.references-list ol li a {
+color: #3366cc;
+text-decoration: none;
+}
+
+.references-list ol li a:hover { text-decoration: underline; }
+
+/* Clearfix */
+.clearfix::after {
+content: '';
+display: table;
+clear: both;
+}
+
+/* Footer */
+footer {
+border-top: 1px solid #a2a9b1;
+margin-top: 40px;
+padding: 16px;
+font-size: 12px;
+color: #54595d;
+text-align: center;
+font-family: Arial, sans-serif;
+}
+
+footer a { color: #3366cc; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 720px) {
+.layout { flex-direction: column; }
+aside { width: 100%; }
+.infobox { float: none; width: 100%; margin: 0 0 16px 0; }
+.nav-links { display: none; }
+}
